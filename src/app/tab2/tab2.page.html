@@ -1,17 +1,22 @@
+
+
+
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Current Game
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-progress-bar id="progress" value="0" color="success"></ion-progress-bar>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <div id="board">
+    <div id="row0" class="center"></div>
+    <div id="row1" class="center"></div>
+    <div id="row2" class="center"></div>
+    <div id="row3" class="center"></div>
+</div>
+
 </ion-content>
