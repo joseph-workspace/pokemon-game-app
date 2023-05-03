@@ -12,7 +12,14 @@ export class Tab2Page implements OnInit {
 
   url = 'https://pokeapi.co/api/v2/pokemon/';
   list: any[] = [];
-  pokemonnumberlist: any[] = [4, 1, 7, 95, 25, 18, 92]
+  filteredList: any[] = [];
+  board: any[] = [
+    [null, null, null, null],
+    [null, null, null, null],
+    [null, null, null, null],
+    [null, null, null, null],
+  ]
+  pokemonnumberlist: any[] = [4, 1, 7, 95, 25, 18, 92, 99]
   isLoading = false;
 
 
@@ -32,11 +39,17 @@ export class Tab2Page implements OnInit {
         .pipe(take(1))
         .subscribe(pokeData => {
           this.list = pokeData
+          this.filteredList = [...this.list];
           this.isLoading = false;
-          console.log(this.list)
         });
-        this.list.sort((a: any, b: any) => a.name > b.name ? 1 : -1);
     }
+     this.makeBaord()
+  }
+   makeBaord(){
+    setTimeout( () => {
+      console.log(this.list)
+  }, 1000);
+    
   }
 
   filterItems(event: any) {
