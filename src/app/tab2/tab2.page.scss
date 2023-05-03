@@ -1,0 +1,42 @@
+
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.card{
+    width: 120px;
+    height: 168px;
+    margin:3px;
+    border-radius:10px;
+    cursor: pointer;
+    background-color:white;
+    transform: 1s;
+}
+
+#board{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width:500px){
+    .card{
+        width: 60px;
+        height: 84px;
+        margin:3px;
+        border-radius:10px;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width:250px){
+    .card{
+        width: 40px;
+        height: 52px;
+        margin:3px;
+        border-radius:10px;
+        cursor: pointer;
+    }
+}
