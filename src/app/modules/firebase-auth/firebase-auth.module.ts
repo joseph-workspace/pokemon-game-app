@@ -7,7 +7,7 @@ import { environment } from 'src/environments/environment';
 
 const firebaseUiAuthConfig: firebaseui.auth.Config = {
   signInFlow: 'popup',
-  signInSuccessUrl: '/settings',
+  signInSuccessUrl: '/tabs/tab1',
   signInOptions: [
     firebase.auth.GoogleAuthProvider.PROVIDER_ID,
     {
