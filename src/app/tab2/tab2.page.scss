@@ -1,42 +1,94 @@
-
-
-.row{
+.row {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-.card{
-    width: 120px;
-    height: 168px;
-    margin:3px;
-    border-radius:10px;
-    cursor: pointer;
-    background-color:white;
-    transform: 1s;
-}
 
-#board{
+
+
+#board {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-@media only screen and (max-width:500px){
-    .card{
+.icon {
+    padding-right: 15px;
+}
+
+.tittle {
+    font-size: 30px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:500px) {
+    .card {
         width: 60px;
         height: 84px;
-        margin:3px;
-        border-radius:10px;
+        margin: 3px;
+        border-radius: 10px;
         cursor: pointer;
     }
 }
 
-@media only screen and (max-width:250px){
-    .card{
+@media only screen and (max-width:250px) {
+    .card {
         width: 40px;
         height: 52px;
-        margin:3px;
-        border-radius:10px;
+        margin: 3px;
+        border-radius: 10px;
         cursor: pointer;
     }
+}
+
+.scene {
+    width: 120px;
+    height: 168px;
+    margin: 3px;
+    perspective: 600px;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    margin: 3px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.card.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 260px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.card__face--front {
+    background: black;
+}
+
+.card__face--back {
+    background: white;
+    transform: rotateY(180deg);
+    border-radius:10px;
 }
