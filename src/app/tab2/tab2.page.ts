@@ -88,7 +88,7 @@ export class Tab2Page implements OnInit {
 
   cardClicked(event: any){
     // console.log(document.getElementById(event.target.attributes[2].nodeValue)?.parentElement?.parentElement)
-    console.log(event.target)
+    console.log(event)
     document.getElementById(event.target.attributes[2].nodeValue)?.parentElement?.parentElement?.classList.toggle("is-flipped")
     // if(this.card1 === null){
     //     this.card1 = 
