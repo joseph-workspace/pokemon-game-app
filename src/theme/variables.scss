@@ -234,3 +234,60 @@
     --ion-card-background: #1e1e1e;
   }
 }
+
+html, body {
+  height: 100vh;
+  margin: 0px;
+}
+
+ion-content {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+ion-card {
+  // height: 25vh;
+  width: 50%;
+  // min-width: 380px;
+  // margin-bottom: 0px;
+
+  ion-card-title {
+      text-align: center;
+      
+  }
+  // ion-button {
+
+  // }
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.new-game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  text-align: center;
+
+  ion-card {
+    // height: 60vh;
+  }
+
+  h1 {
+    // color: ;
+  }
+}
