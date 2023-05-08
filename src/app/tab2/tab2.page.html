@@ -1,10 +1,10 @@
 <ion-header [translucent]="true">
   <ion-toolbar class="tittle">
     <ion-title slot="start">
-      Current Game
+      Current Game <ion-icon name="volume-high-outline" (click)="myAudio.play()" slot="end" class="icon"></ion-icon>
+      <ion-icon name="volume-mute-outline" (click)="myAudio.pause()" slot="end" class="icon"></ion-icon>
     </ion-title>
-    <ion-icon name="volume-high-outline" (click)="myAudio.play()" slot="end" class="icon"></ion-icon>
-    <ion-icon name="volume-mute-outline" (click)="myAudio.pause()" slot="end" class="icon"></ion-icon>
+
   </ion-toolbar>
   <ion-progress-bar id="progress" value="0" color="primary"></ion-progress-bar>
 
@@ -15,7 +15,14 @@
 </audio>
 
 <ion-content [fullscreen]="true" class="center">
-  <h1>player 1 Turn</h1>
+
+  <div class="box">
+    <h1>Music</h1>
+    <div>
+      <ion-icon name="volume-high-outline" (click)="myAudio.play()" slot="end" class="icon"></ion-icon>
+      <ion-icon name="volume-mute-outline" (click)="myAudio.pause()" slot="end" class="icon"></ion-icon>
+    </div>
+  </div>
   <div id="board" *ngFor="let bob of board[0]; let x = index">
     <div id="row{{x}}" class="row " *ngFor="let card of board[x]; let y = index " (click)="cardClicked($event)" >
       <div class="scene scene--card">
