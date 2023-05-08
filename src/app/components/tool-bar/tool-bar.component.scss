@@ -1,0 +1,21 @@
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// .filler {
+//     margin: 0 auto;
+// }
+
+.hamburger-menu {
+    color: black;
+    font-size: 30px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.logout-btn {
+    float: right;
+    padding-right: 8px;
+}
