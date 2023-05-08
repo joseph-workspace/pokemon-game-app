@@ -18,6 +18,8 @@ export class Tab2Page implements OnInit {
     [null, null, null, null],
     [null, null, null, null],
   ]
+  card1: any = null
+  card2: any = null
   pokemonnumberlist: any[] = [4, 1, 7, 95, 25, 18, 92, 99]
   isLoading = false;
   allCards: any[] = []
@@ -49,7 +51,6 @@ export class Tab2Page implements OnInit {
       for (let b = 0; b < this.list.length; b++) {
         let x = 0
         while (x != 2) {
-          console.log(this.list)
           this.allCards[y] = this.list[b].sprites.front_default
           y++
           x++
@@ -86,7 +87,11 @@ export class Tab2Page implements OnInit {
   }
 
   cardClicked(event: any){
-    console.log(document.getElementById(event.target.attributes[2].nodeValue)?.parentElement?.parentElement)
+    // console.log(document.getElementById(event.target.attributes[2].nodeValue)?.parentElement?.parentElement)
+    console.log(event.target)
     document.getElementById(event.target.attributes[2].nodeValue)?.parentElement?.parentElement?.classList.toggle("is-flipped")
+    // if(this.card1 === null){
+    //     this.card1 = 
+    // }
   }
 }
